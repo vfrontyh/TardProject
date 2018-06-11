@@ -1,0 +1,19 @@
+@(members : scala.collection.mutable.HashMap[String, Member])
+
+<html>p
+    <head>
+        <title>All Members</title>
+    </head>
+    <body>
+
+        <h1>All Members</h1>
+
+        @for((k,v) <- members){
+          <a href="#">@k</a>&nbsp;&nbsp;<a href="#">삭제</a>
+          <p>first_nm : @v.first_nm</p>
+          <p>last_nm : @v.last_nm</p>
+        }
+    </body>
+
+
+</html>

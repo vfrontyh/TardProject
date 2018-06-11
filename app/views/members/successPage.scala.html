@@ -1,0 +1,35 @@
+@(str:String)
+
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <title>성공페이지</title>
+    </head>
+    <body>
+
+            <table>
+
+                <tr>
+                    <form method="post" action="/changeInfo">
+                    <td>
+                        <input type="hidden" name="id" value="@str"/>
+                        <input type="submit" name="submit" value="비밀번호변경" />
+                    </td>
+                    </form>
+                    <form method="post" action="/deleteMember">
+                        <td>
+                            <input type="hidden" name="id" value="@str"/>
+                            <input type="submit" name="submit" value="회원탈퇴" />
+                        </td>
+                    </form>
+
+                </tr>
+            </table>
+
+
+
+    </body>
+
+
+</html>

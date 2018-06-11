@@ -1,0 +1,40 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+
+
+GET     /about/:str/:last_nm                     controllers.HomeController.about(str:String,last_nm:String)
+
+
+GET     /welcome/:str/:last_nm                     controllers.HomeController.welcome(str:String,last_nm:String)
+
+
+GET     /member                                     controllers.MemberController.index
+GET     /member/testPage                                    controllers.MemberController.testPage
++ nocsrf
+POST    /member/testPage                                    controllers.MemberController.save
+GET     /member/loginPage                                                      controllers.MemberController.loginPage
+GET     /member/:id                                    controllers.MemberController.show(id:String)
+GET     /member/create/:id/:first_nm/:last_nm                                     controllers.MemberController.create(id:String, first_nm:String, last_nm:String)
+GET     /member/update/:id/:first_nm/:last_nm                                     controllers.MemberController.update(id:String, first_nm:String, last_nm:String)
+GET     /member/delete/:id                                                         controllers.MemberController.delete(id:String)
+
+# loginCheck
++ nocsrf
+POST    /checkPassword                              controllers.MemberController.checkPassword
+
+# changePassword
+POST    /changeInfo                                 controllers.MemberController.changeInfo
+
+
+# changePassword
+POST    /deleteMember                                 controllers.MemberController.deleteMember
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
