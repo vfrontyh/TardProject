@@ -11,7 +11,13 @@
             <table>
 
                 <tr>
-                    <form method="post" action="/changeInfo">
+                    <form method="post" action="/logout">
+                        <td>
+                            <input type="hidden" name="id" value="@str"/>
+                            <input type="submit" name="submit" value="로그아웃" />
+                        </td>
+                    </form>
+                    <form method="post" action="/changeInfoPage">
                     <td>
                         <input type="hidden" name="id" value="@str"/>
                         <input type="submit" name="submit" value="비밀번호변경" />

@@ -2,6 +2,8 @@ package models
 
 
 import scala.collection._
+import play.api.db.Database
+
 
 case class Member(var first_nm: String, var last_nm:String, var id: String, var password: String)
 
